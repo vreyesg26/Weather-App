@@ -13,7 +13,7 @@ function App() {
     const data = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${
         city ? city : "Tegucigalpa"
-      }&appid=${import.meta.env.VITE_APP_API_URL}&units=metric&lang=sp`
+      }&appid=${import.meta.env.VITE_APP_API_URL}&units=metric`
     );
     const weather = await data.json();
 
@@ -36,32 +36,32 @@ function App() {
 
   const currentDate = () => {
     const days = [
-      "Lunes",
-      "Martes",
-      "Miércoles",
-      "Jueves",
-      "Viernes",
-      "Sábado",
-      "Domingo",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
     ];
     const months = [
-      "Enero",
-      "Febrero",
-      "Marzo",
-      "Abril",
-      "Mayo",
-      "Junio",
-      "Julio",
-      "Agosto",
-      "Septiembre",
-      "Octubre",
-      "Noviembre",
-      "Diciembre",
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ];
     let fecha = new Date();
     const completeDate =
       fecha.getDate() +
-      " de " +
+      " of " +
       months[fecha.getMonth()] +
       " " +
       fecha.getFullYear();
@@ -105,17 +105,17 @@ function App() {
           <button
             className="location-button"
             onClick={() => {
-              const newCity = window.prompt("Ingrese la nueva locación");
+              const newCity = window.prompt("Enter the new location");
               newCity ? setCity(newCity) : city;
             }}
           >
             {" "}
-            <span>Cambiar locación</span>
+            <span>Chage location</span>
           </button>
         </div>
       </div>
       <h1 className="credits">
-        Hecho por <span>Allisson Castro</span> 🐥
+        Made by <span>Victor Reyes</span> 😎
       </h1>
     </div>
   );

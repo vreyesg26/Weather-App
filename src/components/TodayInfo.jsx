@@ -6,19 +6,19 @@ const TodayInfo = ({ precipitation, humidity, wind }) => {
     <div className="today-info">
       <div className="precipitation">
         {" "}
-        <span className="title">PRESIÓN</span>
+        <span className="title">PRESSURE</span>
         <span className="value">{precipitation} hPa</span>
         <div className="clear"></div>
       </div>
       <div className="humidity">
         {" "}
-        <span className="title">HUMEDAD</span>
+        <span className="title">HUMIDITY</span>
         <span className="value">{humidity}%</span>
         <div className="clear"></div>
       </div>
       <div className="wind">
         {" "}
-        <span className="title">VIENTO</span>
+        <span className="title">WIND</span>
         <span className="value">{wind} km/h</span>
         <div className="clear"></div>
       </div>
